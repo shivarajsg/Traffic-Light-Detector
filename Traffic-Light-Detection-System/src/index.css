@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Main background - Deep navy for tech feel */
+    --background: 220 30% 8%;
+    --foreground: 0 0% 98%;
+
+    /* Cards with subtle elevation */
+    --card: 220 25% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary - Bright tech blue */
+    --primary: 200 100% 60%;
+    --primary-foreground: 220 30% 8%;
+    --primary-glow: 200 100% 70%;
+
+    /* Secondary - Muted blue-gray */
+    --secondary: 220 20% 20%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 220 20% 16%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 220 25% 18%;
+    --accent-foreground: 0 0% 95%;
+
+    /* Traffic light colors */
+    --traffic-red: 0 85% 60%;
+    --traffic-red-glow: 0 85% 70%;
+    --traffic-yellow: 45 100% 55%;
+    --traffic-yellow-glow: 45 100% 65%;
+    --traffic-green: 120 60% 50%;
+    --traffic-green-glow: 120 60% 60%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 20% 22%;
+    --input: 220 20% 18%;
+    --ring: 200 100% 60%;
+
+    /* Beautiful gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-dark: linear-gradient(135deg, hsl(var(--background)), hsl(var(--card)));
+    --gradient-traffic: linear-gradient(45deg, hsl(var(--traffic-red) / 0.1), hsl(var(--traffic-yellow) / 0.1), hsl(var(--traffic-green) / 0.1));
+
+    /* Shadows and glows */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-traffic-red: 0 0 20px hsl(var(--traffic-red) / 0.4);
+    --shadow-traffic-yellow: 0 0 20px hsl(var(--traffic-yellow) / 0.4);
+    --shadow-traffic-green: 0 0 20px hsl(var(--traffic-green) / 0.4);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Even darker for true dark mode */
+    --background: 220 40% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 35% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 35% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 200 100% 65%;
+    --primary-foreground: 220 40% 4%;
+    --primary-glow: 200 100% 75%;
+
+    --secondary: 220 25% 15%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 220 25% 12%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 220 30% 16%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 25% 18%;
+    --input: 220 25% 15%;
+    --ring: 200 100% 65%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
